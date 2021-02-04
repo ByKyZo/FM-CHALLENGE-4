@@ -1,0 +1,131 @@
+//PRIMARY
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+//SECONDARY
+$Very_Dark_Blue: hsl(234, 12%, 34%);
+$Grayish_Blue: hsl(229, 6%, 66%);
+$Very_Light_Gray: hsl(0, 0%, 98%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+.container{
+    padding: 55px 5px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $Very_Light_Gray;
+    height: 100%; // pas obligatoire
+    position: relative;
+    &__text{
+        color: $Grayish_Blue;
+        font-weight: 400;
+    }
+    &__title{
+        color: $Very_Dark_Blue;
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 10px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    @media (max-width: 600px){
+        font-size: 13px;
+    }
+    .header{
+        &__h1{
+            font-size: 2.6em;
+        }
+        &__h1--normal{
+            font-weight: 200;
+        }
+        &__h1--bold{
+            margin-bottom: 25px;
+        }
+        &__text{
+            font-size: 1.1em;
+        }
+    }
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 600px){
+        width: 100%;
+    }
+    &__center{
+        margin: 0 30px;
+        flex-wrap: wrap;
+        @media (max-width: 1200px){
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+    }
+    justify-content: space-evenly;
+    &__item{
+        width: 370px;
+        height: 260px;
+        @media (max-width: 1200px){
+            margin: 30px;
+        }
+        @media (max-width: 470px){
+            width: 100%;
+        }
+        background-color: white;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+        border-radius: 8px;
+        padding: 30px;
+        position: relative;
+        margin-bottom: 30px;
+        &--cyan{
+            border-top: 5px solid $Cyan;
+        }
+        &--red{
+            border-top: 5px solid $Red;
+        }
+        &--gold{
+            border-top: 5px solid $Orange;
+        }
+        &--blue{
+            border-top: 5px solid $Blue;
+        }
+        &__title{
+            margin-bottom: 10px;
+        }
+        &__text{
+            font-size: 0.9em;
+            line-height: 25px;
+        }
+        &__img{
+            img{
+              position: absolute;
+              right: 35px;
+              bottom: 35px;  
+            }
+        }
+    }
+}
